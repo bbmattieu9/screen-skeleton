@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "skeleton-screen"
+    }
+  },
+  "defaultProject": "skeleton-screen",
+  "cli": {
+    "analytics": false
+  }
 }
