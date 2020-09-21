@@ -16,7 +16,44 @@
 
 </code>
 
-<app-preloader cWidth='100' cHeight='100'></app-preloader>
+<div class="card">
+  <div class="card-head">
+    <!-- Add content preloader for image -->
+    <app-preloader *ngIf="!loaded" cWidth='100' cHeight='100' [circle]=true></app-preloader>
+    <img *ngIf="loaded" src="assets/img/dev.png" alt="avatar">
+
+    <div class="info">
+      <!-- Add another content loader for text -->
+      <app-preloader *ngIf="!loaded" cWidth='150'></app-preloader>
+
+      <div *ngIf="loaded" class="name">
+        <strong>Babatoonday Mattieu</strong>
+      </div>
+
+      <app-preloader *ngIf="!loaded" cWidth='150'></app-preloader>
+
+      <div *ngIf="loaded" class="desc">
+        Frontend Developer
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <app-preloader *ngIf="!loaded" cWidth='100'></app-preloader>
+    <strong *ngIf="loaded">About Me</strong>
+
+    <app-preloader *ngIf="!loaded" cWidth='300' cHeight='100'></app-preloader>
+
+    <div *ngIf="loaded" class="about">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+      Repellat asperiores tempora quasi nulla a,
+      quos nemo voluptas provident earum unde totam!
+      Autem consectetur aperiam cupiditate illum magni animi quae fugiat.
+    </div>
+  </div>
+</div>
+
+<!-- <app-preloader cWidth='100' cHeight='100'></app-preloader>
 <app-preloader cWidth='200' cHeight='50'></app-preloader>
 
-<app-preloader cWidth='100' cHeight='100' [circle]=true></app-preloader>
+<app-preloader cWidth='100' cHeight='100' [circle]=true></app-preloader> -->
